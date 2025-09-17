@@ -48,8 +48,8 @@ const data = {
           isActive: true,
         },
         {
-          title: "Laboratory",
-          url: "/laboratory",
+          title: "Create Pool",
+          url: "/create-pool",
           icon: AtomIcon,
           isActive: false,
         },
@@ -113,7 +113,7 @@ export function DashboardSidebar({
       <SidebarContent>
         {data.navMain.map((group, i) => (
           <SidebarGroup
-            className={cn(i === 0 && "rounded-t-none")}
+            className={cn("h-screen",i === 0 && "rounded-t-none")}
             key={group.title}
           >
             <SidebarGroupLabel>
@@ -165,7 +165,7 @@ export function DashboardSidebar({
         ))}
       </SidebarContent>
 
-      <SidebarFooter className="p-0">
+      <SidebarFooter className="p-0 ">
         <SidebarGroup>
           <SidebarGroupLabel>
             <Bullet className="mr-2" />
@@ -219,8 +219,6 @@ export function DashboardSidebar({
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarFooter>
-
-      <SidebarRail />
     </Sidebar>
   );
 }

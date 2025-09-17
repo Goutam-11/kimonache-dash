@@ -8,6 +8,7 @@ import GearIcon from "@/components/icons/gear";
 import ProcessorIcon from "@/components/icons/proccesor";
 import BoomIcon from "@/components/icons/boom";
 import mockDataJson from "@/mock.json";
+import { SidebarTrigger } from "@/components/ui/sidebar";
 import type { MockData } from "@/types/dashboard";
 
 const mockData = mockDataJson as MockData;
@@ -25,7 +26,7 @@ export default function DashboardOverview() {
       header={{
         title: "Overview",
         description: "Last updated 12:05",
-        icon: BracketsIcon,
+        icon: SidebarTrigger,
       }}
     >
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">

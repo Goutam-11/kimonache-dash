@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   description:
     "The ultimate OS for rebels. Making the web for brave individuals.",
-    generator: 'v0.app'
+  generator: "v0.app",
 };
 
 export default function RootLayout({
@@ -63,12 +63,17 @@ export default function RootLayout({
             <MobileHeader mockData={mockData} />
 
             {/* Desktop Layout */}
-            <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-gap lg:px-sides">
-              <div className="hidden lg:block col-span-2 top-0 relative">
+            <div className="w-full flex">
+              {/* Sidebar */}
+              <div className="hidden lg:block p-2 m-2 flex-shrink-0">
                 <DashboardSidebar />
               </div>
-              <div className="col-span-1 lg:col-span-7">{children}</div>
-              <div className="col-span-3 hidden lg:block">
+
+              {/* Main content */}
+              <div className="flex-1">{children}</div>
+
+              {/* Right column */}
+              <div className="hidden m-4 lg:block flex-shrink-0 w-[320px]">
                 <div className="space-y-gap py-sides min-h-screen max-h-screen sticky top-0 overflow-clip">
                   <Widget widgetData={mockData.widgetData} />
                   <Notifications
